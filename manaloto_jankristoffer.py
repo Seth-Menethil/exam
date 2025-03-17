@@ -1,6 +1,6 @@
 num_choice = 0
 num_guess = 0
-num_true = 5
+num_true = 69
 
 print("=== Number Guessing Game ===")
 print("1. Start/Restart Game")
