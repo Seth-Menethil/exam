@@ -1,1 +1,5 @@
-print("Trigonometric Calculator")
+print("TRIGONOMETRIC CALCULATOR")
+print("1) Calculate sine of an angle")
+print("2) Calculate cosine of an angle")
+print("3) Calculate tangent of an angle")
+print("4) Exit.")
