@@ -8,32 +8,26 @@ while True:
         print("3) Tangent")
         print("4) Exit.")
         choice = int(input("Choose an option (1-4): "))
-        angle = float(input("Enter angle value: "))
         while True:
-            try:
-                if choice == 1:
-                    value = input("Is this value in (d) degrees or (r)adians? : ")
-                    options = ["d", "D", "r", "R"]
-                    if value in options and value == "d" or value == "D":    
-                        degree = math.sin(angle)
-                        print(f"Sine ({angle}\u00B0) = {degree}")
-                        break
-                    elif value in options and value == "r" or value == "R":
-                        radians = degree * (pi/180)
-                        print(f"Sine ({angle}rad) = {radians}")
-                        break
-                if choice == 2:
-                    value = input("Is this value in (d) degrees or (r)adians? : ")
-                    options = ["d", "D", "r", "R"]
-                    if value in options and value == "d" or value == "D":
-                        degree = math.cos(angle)
-                        print(f"Cosine ({angle}\u00B0) = {degree}")
-                        break
-                    elif value in options and value == "r" or value == "R":
-                        radians = degree * (pi/180)
-                        print(f"Cosine ({angle}rad) = {radians}")
-                        break
-            except ValueError:
-             print("Invalid input!")
+                if choice == 4:
+                    print("Exiting program.")
+                break
+        angle = int(input("Enter angle value in Degrees: "))
+        radians = math.radians(angle)  
+        if choice == 1:
+            result = math.sin(radians)
+            print(f"Sine({angle}°) = {result}")
+            break
+        elif choice == 2:
+            result = math.cos(radians)
+            print(f"Cosine({angle}°) = {result}")
+            break
+        elif choice == 3:
+            result = math.tan(radians)
+            print(f"Tangent({angle}°) = {result}")
+            break
+        else:
+            print("Invalid choice! Please enter a number between 1 and 4.")
     except ValueError:
         print("Invalid input!")
+
