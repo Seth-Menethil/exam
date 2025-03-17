@@ -15,7 +15,7 @@ while True:
                     value = input("Is this value in (d) degrees or (r)adians? : ")
                     options = ["d", "D", "r", "R"]
                     if value in options and value == "d" or value == "D":    
-                        degree = angle * pi / 180
+                        degree = math.sin(angle)
                         print(f"Sine ({angle}\u00B0) = {degree}")
                         break
                     elif value in options and value == "r" or value == "R":
@@ -25,8 +25,8 @@ while True:
                 if choice == 2:
                     value = input("Is this value in (d) degrees or (r)adians? : ")
                     options = ["d", "D", "r", "R"]
-                    if value in options and value == "d" or value == "D":    
-                        degree = angle * pi / 180
+                    if value in options and value == "d" or value == "D":
+                        degree = math.cos(angle)
                         print(f"Cosine ({angle}\u00B0) = {degree}")
                         break
                     elif value in options and value == "r" or value == "R":
