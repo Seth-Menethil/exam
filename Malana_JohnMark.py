@@ -17,12 +17,14 @@ while True:
             print(f"Deposited {amount}. Your new balance is {balance}")
         
     elif option == 2:
-        amount = int(input("Enter withdrawal amount: "))
-        if amount < balance:
-            print("Invalid Input!")
-        else:2
-            balance -= amount
-            print(f"Withdrew {amount}. Your new balance is {balance}")
+        withdraw = input("Enter amount to withdraw: ")
+        if float(withdraw) > balance:
+            print("Insufficient balance!")
+            
+            
+        else:
+            balance -= float(withdraw)
+            print("Withdrawal successful!")
 
     elif option == 3:
         print(f"Your current balance is {balance}")
