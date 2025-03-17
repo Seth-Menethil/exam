@@ -1,0 +1,38 @@
+num_choice = 0
+num_guess = 0
+num_true = 69
+
+print("=== Number Guessing Game ===")
+print("1. Start/Restart Game")
+print("2. Exit")
+
+while num_choice != 2:
+    try:
+        num_choice = int(input("Choose an option (1-2): "))
+        if num_choice != 1 and num_choice != 2:
+            print("Invalid choice")
+        elif num_choice == 2:
+            print("Exiting the Number Guessing Game. Goodbye!")
+            break
+    except ValueError:
+        print("Enter integers only")
+    
+    while num_choice == 1:
+        while num_guess != -1 or num_guess != num_true:
+            try:
+                num_guess = int(input("Guess the secret number (or -1 to quit): "))
+
+                if num_guess == -1:
+                    print("Restart? (1-2)")
+                    break
+                elif num_guess < num_true:
+                    print("Too low")
+                elif num_guess > num_true:
+                    print("Too High")
+                elif num_guess == num_true:
+                    print("Correct!")
+                    print("Restart?")
+                    break
+            except ValueError:
+                print("Enter integers only")
+        break
