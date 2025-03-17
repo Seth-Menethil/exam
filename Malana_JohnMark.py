@@ -20,7 +20,7 @@ while True:
         amount = int(input("Enter withdrawal amount: "))
         if amount < balance:
             print("Invalid Input!")
-        else:2
+        else:
             balance -= amount
             print(f"Withdrew {amount}. Your new balance is {balance}")
 
